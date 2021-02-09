@@ -1,0 +1,26 @@
+{
+  "name": "@wenfujie/cli",
+  "version": "1.0.1",
+  "description": "个人cli工具",
+  "main": "index.js",
+  "scripts": {
+    "publish": "npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "deploy"
+  ],
+  "bin": {
+    "wfj-cli": "./index.js"
+  },
+  "author": "fujie.wen",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^7.0.0",
+    "download-git-repo": "^3.0.2",
+    "ora": "^5.3.0"
+  }
+}
