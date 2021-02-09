@@ -10,11 +10,14 @@ const { promisify } = require('util')
 // 显示进程进度
 const ora = require('ora')
 const { program } = require('commander')
+const downloadGitRepo = require('download-git-repo')
+// clone 的仓库
+const REPO_DESC = 'github:wenfujie/search-360-bd'
 
 // 主入口
 function main() {
   const cb = (filderName) => {
-    clone('github:wenfujie/search-360-bd', filderName)
+    clone(REPO_DESC, filderName)
   }
   registerCommand(cb)
 }
@@ -35,7 +38,7 @@ function registerCommand(callback) {
     .action((filderName) => {
       typeof callback && callback(filderName)
     })
-  // 该句为了找到node安装路径，必须执行
+
   program.parse(process.argv)
 }
 
@@ -45,7 +48,7 @@ function registerCommand(callback) {
  * @param {string} repo 下载要存放目录
  */
 async function clone(repo, desc) {
-  const down = promisify(require('download-git-repo'))
+  const down = promisify(downloadGitRepo)
   const downProgress = ora(`下载${repo}中...`)
   await down(repo, desc)
     .then((res) => {
