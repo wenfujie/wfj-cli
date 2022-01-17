@@ -1,6 +1,6 @@
 {
   "name": "@wenfujie/cli",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "个人脚手架",
   "main": "index.js",
   "scripts": {
@@ -15,13 +15,24 @@
     "commander"
   ],
   "bin": {
-    "wfj-cli": "./index.js"
+    "wfj-create": "bin/wfj-create.js",
+    "wfj": "bin/wfj.js"
   },
   "author": "fujie.wen",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^4.1.1",
     "commander": "^7.0.0",
     "download-git-repo": "^3.0.2",
-    "ora": "^5.3.0"
-  }
+    "events": "^3.3.0",
+    "execa": "^5.1.1",
+    "inquirer": "^8.2.0",
+    "node-emoji": "^1.11.0",
+    "ora": "^5.3.0",
+    "read-pkg": "^5.2.0",
+    "readline": "^1.3.0",
+    "strip-ansi": "^5.1.0",
+    "validate-npm-package-name": "^3.0.0"
+  },
+  "devDependencies": {}
 }
