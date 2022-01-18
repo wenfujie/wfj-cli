@@ -1,7 +1,7 @@
 <!--
  * @Date: 2021-08-09 15:40:24
  * @LastEditors: wenfujie
- * @LastEditTime: 2022-01-17 17:22:32
+ * @LastEditTime: 2022-01-18 11:43:02
  * @FilePath: /wfj-cli/README.md
 -->
 
@@ -25,3 +25,7 @@ wfj create projectName
    ```bash
    npm run publish
    ```
+
+### 其他
+
+[当前脚手架相关插件仓库](https://github.com/wenfujie/npm-package)
